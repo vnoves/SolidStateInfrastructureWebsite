@@ -42,7 +42,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Deploy to S3 (static assets: long cache)
+      - name: Deploy to S3 (static assets long cache)
         run: |
           aws s3 sync out/ s3://${{ env.S3_BUCKET }} \
             --delete \
