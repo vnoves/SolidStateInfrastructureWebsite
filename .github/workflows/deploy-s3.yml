@@ -50,7 +50,7 @@ jobs:
             --exclude "*.html" \
             --exclude "*.json"
 
-      - name: Deploy to S3 (HTML/JSON: no cache)
+      - name: Deploy to S3 (HTML/JSON no cache)
         run: |
           aws s3 sync out/ s3://${{ env.S3_BUCKET }} \
             --delete \
